@@ -2,6 +2,7 @@ const form = document.getElementById("studentForm");
 const tableBody = document.getElementById("studentTable");
 const search = document.getElementById("search");
 
+
 let students = JSON.parse(localStorage.getItem("students")) || [];
 let editIndex = -1;
 
