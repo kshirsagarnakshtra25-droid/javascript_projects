@@ -1,0 +1,1753 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f4f7fb;
+    color: #1e293b;
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 18px 7%;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: white;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+
+.logo h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+}
+
+
+.logo span {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container {
+    width: min(1200px, 92%);
+    margin: 35px auto;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 230px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #1e40af,
+            #2563eb
+        );
+
+    border-radius: 24px;
+
+    padding: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+
+    overflow: hidden;
+
+    position: relative;
+
+    box-shadow:
+        0 20px 45px rgba(30, 64, 175, 0.20);
+}
+
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    right: 150px;
+    top: -150px;
+}
+
+
+.hero-content {
+    max-width: 700px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero-tag {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 14px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 50px;
+
+    font-size: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+.hero h2 {
+    font-size: clamp(28px, 4vw, 42px);
+
+    line-height: 1.2;
+
+    margin-bottom: 12px;
+}
+
+
+.hero p {
+    color: #dbeafe;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+.hero-icon {
+    width: 140px;
+    height: 140px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.10);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 55px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =====================================================
+   COMMON SECTION
+===================================================== */
+
+.input-section,
+.rules-section,
+.results-section {
+    background: white;
+
+    margin-top: 25px;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.05);
+}
+
+
+.section-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+
+.heading-icon {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 12px;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 18px;
+}
+
+
+.section-heading h3 {
+    font-size: 19px;
+
+    color: #111827;
+
+    margin-bottom: 3px;
+}
+
+
+.section-heading p {
+    font-size: 13px;
+
+    color: #64748b;
+}
+
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+.input-area {
+    display: flex;
+
+    align-items: end;
+
+    gap: 20px;
+}
+
+
+.form-group {
+    flex: 1;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #374151;
+
+    margin-bottom: 8px;
+}
+
+
+.input-wrapper {
+    position: relative;
+}
+
+
+.input-wrapper i {
+    position: absolute;
+
+    left: 16px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #64748b;
+}
+
+
+.input-wrapper input {
+    width: 100%;
+
+    height: 52px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    padding: 0 16px 0 45px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+
+.input-wrapper input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.calculate-btn {
+    height: 52px;
+
+    padding: 0 28px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 8px 18px rgba(37, 99, 235, 0.20);
+}
+
+
+.calculate-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(37, 99, 235, 0.30);
+}
+
+
+.calculate-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   RULE CARDS
+===================================================== */
+
+.rules-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.rule-card {
+    padding: 18px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    border: 1px solid;
+}
+
+
+.rule-card.high {
+    background: #fff7ed;
+
+    border-color: #fed7aa;
+}
+
+
+.rule-card.medium {
+    background: #eff6ff;
+
+    border-color: #bfdbfe;
+}
+
+
+.rule-card.low {
+    background: #f0fdf4;
+
+    border-color: #bbf7d0;
+}
+
+
+.rule-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.high .rule-icon {
+    background: #ffedd5;
+    color: #ea580c;
+}
+
+
+.medium .rule-icon {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+
+.low .rule-icon {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+
+.rule-card strong {
+    display: block;
+
+    font-size: 14px;
+
+    color: #1e293b;
+
+    margin-bottom: 4px;
+}
+
+
+.rule-card span {
+    display: block;
+
+    font-size: 11px;
+
+    color: #64748b;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+}
+
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+}
+
+
+thead {
+    background: #f8fafc;
+}
+
+
+th {
+    padding: 15px;
+
+    text-align: left;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    color: #64748b;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+
+td {
+    padding: 16px 15px;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    color: #334155;
+}
+
+
+tbody tr {
+    transition: 0.2s;
+}
+
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+.employee-name {
+    font-weight: 600;
+
+    color: #111827;
+}
+
+
+.salary-value {
+    font-weight: 600;
+
+    color: #1e293b;
+}
+
+
+/* =====================================================
+   CATEGORY BADGES
+===================================================== */
+
+.badge {
+    display: inline-flex;
+
+    padding: 6px 10px;
+
+    border-radius: 50px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+.badge-high {
+    background: #ffedd5;
+
+    color: #c2410c;
+}
+
+
+.badge-medium {
+    background: #dbeafe;
+
+    color: #1d4ed8;
+}
+
+
+.badge-low {
+    background: #dcfce7;
+
+    color: #15803d;
+}
+
+
+/* =====================================================
+   TOTAL SALARY
+===================================================== */
+
+.total-card {
+    margin-top: 20px;
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #eef2ff
+        );
+
+    border: 1px solid #dbeafe;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+}
+
+
+.total-icon {
+    width: 52px;
+    height: 52px;
+
+    border-radius: 13px;
+
+    background: #2563eb;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 21px;
+
+    box-shadow:
+        0 8px 18px rgba(37, 99, 235, 0.20);
+}
+
+
+.total-content span {
+    font-size: 12px;
+
+    color: #64748b;
+}
+
+
+.total-content h2 {
+    font-size: 25px;
+
+    color: #1e3a8a;
+
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   MOBILE RESULTS
+===================================================== */
+
+.mobile-results {
+    display: none;
+}
+
+
+.employee-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    margin-bottom: 12px;
+}
+
+
+.employee-card-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+
+.employee-card-header h4 {
+    font-size: 15px;
+}
+
+
+.employee-info-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+
+.info-box {
+    padding: 10px;
+
+    background: #f8fafc;
+
+    border-radius: 8px;
+}
+
+
+.info-box span {
+    display: block;
+
+    font-size: 10px;
+
+    color: #64748b;
+
+    margin-bottom: 3px;
+}
+
+
+.info-box strong {
+    font-size: 12px;
+
+    color: #334155;
+}
+
+
+/* =====================================================
+   FOOTER NOTE
+===================================================== */
+
+.footer-note {
+    margin-top: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+
+.footer-note i {
+    color: #2563eb;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   HIDDEN
+===================================================== */
+
+.hidden {
+    display: none;
+}
+
+
+/* =====================================================
+   RESPONSIVE - TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .container {
+        width: 94%;
+    }
+
+
+    .hero {
+        padding: 35px;
+    }
+
+
+    .rules-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .input-area {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .calculate-btn {
+        justify-content: center;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE - MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 15px 5%;
+    }
+
+
+    .logo-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 18px;
+    }
+
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+
+    .logo span {
+        font-size: 10px;
+    }
+
+
+    .container {
+        width: 94%;
+
+        margin: 20px auto;
+    }
+
+
+    .hero {
+        min-height: auto;
+
+        padding: 28px 22px;
+
+        border-radius: 18px;
+    }
+
+
+    .hero h2 {
+        font-size: 27px;
+    }
+
+
+    .hero p {
+        font-size: 13px;
+    }
+
+
+    .hero-icon {
+        display: none;
+    }
+
+
+    .input-section,
+    .rules-section,
+    .results-section {
+        padding: 20px;
+
+        border-radius: 16px;
+    }
+
+
+    .section-heading {
+        gap: 10px;
+    }
+
+
+    .heading-icon {
+        width: 40px;
+        height: 40px;
+
+        flex-shrink: 0;
+    }
+
+
+    .section-heading h3 {
+        font-size: 16px;
+    }
+
+
+    .section-heading p {
+        font-size: 11px;
+    }
+
+
+    .rule-card {
+        padding: 14px;
+    }
+
+
+    .table-container {
+        display: none;
+    }
+
+
+    .mobile-results {
+        display: block;
+    }
+
+
+    .total-card {
+        padding: 18px;
+    }
+
+
+    .total-content h2 {
+        font-size: 21px;
+    }
+
+
+    .footer-note {
+        text-align: center;
+
+        line-height: 1.5;
+    }
+
+}
+/* =====================================================
+   SEARCH AREA
+===================================================== */
+
+.search-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+
+/* SEARCH BOX */
+
+.search-box {
+    position: relative;
+    flex: 1;
+}
+
+
+.search-box i {
+    position: absolute;
+
+    left: 16px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    height: 48px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 10px;
+
+    padding: 0 16px 0 44px;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.3s;
+
+    background: #ffffff;
+}
+
+
+.search-box input:focus {
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 4px rgba(37, 99, 235, 0.10);
+}
+
+
+.search-box input::placeholder {
+    color: #94a3b8;
+}
+
+
+/* =====================================================
+   CLEAR BUTTON
+===================================================== */
+
+.clear-btn {
+    height: 48px;
+
+    padding: 0 18px;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 10px;
+
+    background: #fff1f2;
+
+    color: #dc2626;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    transition: 0.3s;
+}
+
+
+.clear-btn:hover {
+    background: #fee2e2;
+
+    border-color: #fca5a5;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   NO DATA
+===================================================== */
+
+.no-data {
+    text-align: center;
+
+    padding: 35px !important;
+
+    color: #94a3b8 !important;
+
+    font-size: 13px !important;
+}
+
+
+/* =====================================================
+   MOBILE SEARCH
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .search-area {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .clear-btn {
+        justify-content: center;
+    }
+
+}
+
+/* =====================================================
+   EMPLOYEE TABLE TOOLBAR
+===================================================== */
+
+.table-toolbar {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 18px 20px;
+
+    margin-bottom: 15px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+}
+
+
+/* =====================================================
+   TABLE TITLE
+===================================================== */
+
+.table-title {
+    min-width: 200px;
+}
+
+
+.table-title h4 {
+    margin: 0 0 4px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    color: #111827;
+}
+
+
+.table-title span {
+    font-size: 11px;
+
+    color: #64748b;
+}
+
+
+/* =====================================================
+   TABLE ACTIONS
+===================================================== */
+
+.table-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex: 1;
+
+    justify-content: flex-end;
+}
+
+
+/* =====================================================
+   SEARCH BOX
+===================================================== */
+
+.search-box {
+    position: relative;
+
+    width: 320px;
+}
+
+
+.search-box i {
+    position: absolute;
+
+    left: 15px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    pointer-events: none;
+}
+
+
+.search-box input {
+    width: 100%;
+
+    height: 44px;
+
+    padding: 0 15px 0 42px;
+
+    border: 1px solid #d1d5db;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 12px;
+
+    outline: none;
+
+    transition: all 0.25s ease;
+}
+
+
+.search-box input::placeholder {
+    color: #94a3b8;
+}
+
+
+.search-box input:hover {
+    border-color: #94a3b8;
+}
+
+
+.search-box input:focus {
+    border-color: #2563eb;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+
+.search-box:focus-within i {
+    color: #2563eb;
+}
+
+
+/* =====================================================
+   CLEAR BUTTON
+===================================================== */
+
+.clear-btn {
+    height: 44px;
+
+    padding: 0 16px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 9px;
+
+    background: #fff1f2;
+
+    color: #dc2626;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: all 0.25s ease;
+}
+
+
+.clear-btn i {
+    font-size: 11px;
+}
+
+
+.clear-btn:hover {
+    background: #fee2e2;
+
+    border-color: #fca5a5;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(220, 38, 38, 0.10);
+}
+
+
+.clear-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   TABLE CONTAINER
+===================================================== */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+    scrollbar-width: thin;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+table {
+    width: 100%;
+
+    min-width: 900px;
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+}
+
+
+/* =====================================================
+   TABLE HEADER
+===================================================== */
+
+thead {
+    background: #f1f5f9;
+}
+
+
+th {
+    padding: 14px 15px;
+
+    text-align: left;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+    color: #475569;
+
+    border-bottom: 1px solid #e2e8f0;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   TABLE BODY
+===================================================== */
+
+td {
+    padding: 15px;
+
+    font-size: 12px;
+
+    color: #475569;
+
+    border-bottom: 1px solid #f1f5f9;
+
+    white-space: nowrap;
+}
+
+
+tbody tr {
+    background: #ffffff;
+
+    transition: all 0.2s ease;
+}
+
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+tbody tr:hover {
+    background: #f8fafc;
+
+    transform: scale(1.001);
+}
+
+
+/* =====================================================
+   EMPLOYEE NAME
+===================================================== */
+
+.employee-name {
+    font-weight: 600;
+
+    color: #111827;
+}
+
+
+/* =====================================================
+   SALARY VALUES
+===================================================== */
+
+.salary-value {
+    font-weight: 600;
+
+    color: #1e293b;
+}
+
+
+td strong {
+    font-weight: 700;
+
+    color: #2563eb;
+}
+
+
+/* =====================================================
+   CATEGORY BADGES
+===================================================== */
+
+.badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 5px 10px;
+
+    border-radius: 50px;
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+.badge-high {
+    background: #fff7ed;
+
+    color: #c2410c;
+
+    border: 1px solid #fed7aa;
+}
+
+
+.badge-medium {
+    background: #eff6ff;
+
+    color: #1d4ed8;
+
+    border: 1px solid #bfdbfe;
+}
+
+
+.badge-low {
+    background: #f0fdf4;
+
+    color: #15803d;
+
+    border: 1px solid #bbf7d0;
+}
+
+
+/* =====================================================
+   NO DATA MESSAGE
+===================================================== */
+
+.no-data {
+    text-align: center !important;
+
+    padding: 45px !important;
+
+    color: #94a3b8 !important;
+
+    font-size: 13px !important;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .table-toolbar {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .table-actions {
+        width: 100%;
+
+        justify-content: flex-start;
+    }
+
+
+    .search-box {
+        flex: 1;
+
+        width: auto;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .table-toolbar {
+        padding: 15px;
+
+        border-radius: 12px;
+    }
+
+
+    .table-actions {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+
+    .search-box {
+        width: 100%;
+    }
+
+
+    .clear-btn {
+        width: 100%;
+    }
+
+
+    .search-box input {
+        height: 46px;
+    }
+
+
+    .clear-btn {
+        height: 46px;
+    }
+
+
+    .table-title h4 {
+        font-size: 14px;
+    }
+
+
+    .table-title span {
+        font-size: 10px;
+    }
+
+}
+
+/* =====================================================
+   EMPLOYEE ENTRY FORM
+===================================================== */
+
+.employee-form {
+    display: grid;
+
+    grid-template-columns:
+        0.8fr
+        1.3fr
+        1.2fr
+        auto;
+
+    gap: 15px;
+
+    align-items: end;
+
+    padding: 20px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+}
+
+
+/* FORM GROUP */
+
+.employee-form .form-group {
+    min-width: 0;
+}
+
+
+/* INPUT */
+
+.employee-form input {
+    height: 48px;
+}
+
+
+/* ADD BUTTON */
+
+.employee-form .calculate-btn {
+    height: 48px;
+
+    white-space: nowrap;
+}
+
+
+/* MESSAGE */
+
+.message-box {
+    min-height: 22px;
+
+    margin-top: 10px;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+
+.message-box.success {
+    color: #16a34a;
+}
+
+
+.message-box.error {
+    color: #dc2626;
+}
+
+
+/* DELETE BUTTON */
+
+.delete-btn {
+    width: 32px;
+
+    height: 32px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #fff1f2;
+
+    color: #dc2626;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.delete-btn:hover {
+    background: #fee2e2;
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .employee-form {
+
+        grid-template-columns:
+            1fr 1fr;
+
+    }
+
+
+    .employee-form .calculate-btn {
+
+        width: 100%;
+
+        justify-content: center;
+
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .employee-form {
+
+        grid-template-columns: 1fr;
+
+        padding: 15px;
+
+    }
+
+
+    .employee-form .calculate-btn {
+
+        width: 100%;
+
+    }
+
+}
+
+
+

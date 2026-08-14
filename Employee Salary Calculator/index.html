@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Salary Calculator</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fa-solid fa-money-check-dollar"></i>
+            </div>
+
+            <div>
+                <h1>SalaryPro</h1>
+                <span>Employee Salary Calculator</span>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-tag">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Payroll Management
+                </span>
+
+                <h2>Employee Salary Calculator</h2>
+
+                <p>
+                    Calculate HRA, DA, tax and final salary for multiple
+                    employees quickly and easily.
+                </p>
+
+            </div>
+
+            <div class="hero-icon">
+                <i class="fa-solid fa-users"></i>
+            </div>
+
+        </section>
+
+
+        <!-- Input Section -->
+        
+<!-- =====================================================
+     ADD EMPLOYEE SECTION
+===================================================== -->
+
+<section class="input-section">
+
+    <div class="section-heading">
+
+        <div class="heading-icon">
+            <i class="fa-solid fa-user-plus"></i>
+        </div>
+
+        <div>
+            <h3>Add Employee</h3>
+
+            <p>
+                Enter employee details to calculate salary
+            </p>
+        </div>
+
+    </div>
+
+
+    <!-- EMPLOYEE FORM -->
+
+    <div class="employee-form">
+
+        <!-- EMPLOYEE ID -->
+
+        <div class="form-group">
+
+            <label for="employeeId">
+                Employee ID
+            </label>
+
+            <div class="input-wrapper">
+
+                <i class="fa-solid fa-id-card"></i>
+
+                <input
+                    type="text"
+                    id="employeeId"
+                    placeholder="EMP001"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- EMPLOYEE NAME -->
+
+        <div class="form-group">
+
+            <label for="employeeName">
+                Employee Name
+            </label>
+
+            <div class="input-wrapper">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                    type="text"
+                    id="employeeName"
+                    placeholder="Enter employee name"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- BASIC SALARY -->
+
+        <div class="form-group">
+
+            <label for="basicSalary">
+                Basic Salary
+            </label>
+
+            <div class="input-wrapper">
+
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                <input
+                    type="number"
+                    id="basicSalary"
+                    placeholder="Enter salary"
+                    min="1"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- ADD BUTTON -->
+
+        <button
+            class="calculate-btn"
+            onclick="addEmployee()"
+        >
+
+            <i class="fa-solid fa-plus"></i>
+
+            Add Employee
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+
+        <!-- Salary Rules -->
+        <section class="rules-section">
+
+            <div class="section-heading">
+
+                <div class="heading-icon">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+
+                <div>
+                    <h3>Salary Rules</h3>
+                    <p>Tax and salary classification rules</p>
+                </div>
+
+            </div>
+
+
+            <div class="rules-grid">
+
+                <div class="rule-card high">
+
+                    <div class="rule-icon">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+
+                    <div>
+                        <strong>₹1,00,000+</strong>
+                        <span>20% Tax · High Salary</span>
+                    </div>
+
+                </div>
+
+
+                <div class="rule-card medium">
+
+                    <div class="rule-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+
+                    <div>
+                        <strong>₹50,000 – ₹99,999</strong>
+                        <span>10% Tax · Medium Salary</span>
+                    </div>
+
+                </div>
+
+
+                <div class="rule-card low">
+
+                    <div class="rule-icon">
+                        <i class="fa-solid fa-arrow-trend-down"></i>
+                    </div>
+
+                    <div>
+                        <strong>Below ₹50,000</strong>
+                        <span>5% Tax · Low Salary</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Results -->
+        <section id="resultsSection" class="results-section hidden">
+
+            <div class="section-heading">
+
+                <div class="heading-icon">
+                    <i class="fa-solid fa-file-invoice-dollar"></i>
+                </div>
+
+                <div>
+                    <h3>Salary Details</h3>
+                    <p>Detailed salary information for all employees</p>
+                </div>
+
+            </div>
+            
+<!-- SEARCH + TABLE HEADER -->
+
+<div class="table-toolbar">
+
+    <div class="table-title">
+
+        <h4>
+            Employee Records
+        </h4>
+
+        <span>
+            Search and view employee salary details
+        </span>
+
+    </div>
+
+
+    <div class="table-actions">
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchEmployee"
+                placeholder="Search employee name..."
+                onkeyup="searchEmployee()"
+            >
+
+        </div>
+
+
+        <!-- Clear All -->
+
+        <button
+            class="clear-btn"
+            onclick="clearAllEmployees()"
+        >
+
+            <i class="fa-solid fa-trash"></i>
+
+            Clear All
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- TABLE -->
+
+<div class="table-container">
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>#</th>
+                <th>Employee</th>
+                <th>Basic Salary</th>
+                <th>HRA</th>
+                <th>DA</th>
+                <th>Tax</th>
+                <th>Final Salary</th>
+                <th>Category</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="salaryTableBody">
+
+        </tbody>
+
+    </table>
+
+</div>
+
+
+
+
+            
+
+
+            <!-- Mobile Cards -->
+            <div id="mobileResults" class="mobile-results">
+
+            </div>
+
+
+            <!-- Total Salary -->
+            <div class="total-card">
+
+                <div class="total-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+
+                <div class="total-content">
+
+                    <span>Total Salary Paid</span>
+
+                    <h2 id="totalSalary">₹0.00</h2>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Footer Note -->
+        <div class="footer-note">
+
+            <i class="fa-solid fa-circle-info"></i>
+
+            <span>
+                Salary calculations are based on the rules defined above.
+            </span>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 SalaryPro · Employee Salary Calculator
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
